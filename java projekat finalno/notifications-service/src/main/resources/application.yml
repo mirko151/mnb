@@ -1,0 +1,10 @@
+server:
+  port: ${SERVER_PORT:8084}
+spring:
+  data:
+    cassandra:
+      contact-points: ${CASSANDRA_CONTACT_POINTS:localhost}
+      port: 9042
+      keyspace-name: ${CASSANDRA_KEYSPACE:notifications_ks}
+      local-datacenter: datacenter1
+      schema-action: create_if_not_exists

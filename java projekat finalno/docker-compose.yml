@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  mongo-users:
+    image: mongo:6.0
+    container_name: mongo-users
+    ports: ["27017:27017"]
+  cassandra:
+    image: cassandra:4.1
+    container_name: cassandra
+    ports: ["9042:9042"]
+  workflow-neo4j:
+    image: neo4j:5.20
+    container_name: workflow-neo4j
+    ports: ["7474:7474", "7687:7687"]
